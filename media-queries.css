@@ -1,0 +1,230 @@
+@media screen and (max-width: 768px) {
+    .navbar-body{
+        display: none;
+    }
+    .hamburger-icon{
+        display: block;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .active{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 10px;
+        inset: 10px;
+        top: 70px;
+        background: #fff;
+        width: 90%;
+        margin-inline: auto;
+        height: 80vh;
+    }
+    .banner-body{
+        width: 30%;
+    }
+
+    .banner-body h1{
+        font-size: 2rem;
+    }
+
+    .banner-body h2{
+        font-size: 2rem;
+    }
+
+
+    .banner-img{
+        width: 45%;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner-buttons a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner-buttons{
+        gap: 20px;
+    }
+
+    .contact-us{
+        padding: 50px 20px 20px;
+    }
+
+    .contact-left{
+        width: 60%;
+    }
+    .contact-right{
+        width: 40%;
+    }
+
+    table{
+        width: 90%;
+    }
+}
+
+
+@media screen and (max-width: 425px) {
+    .banner-section{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        isolation: isolate;
+    }
+
+    .banner-body-body-main{
+        text-align: center;
+    }
+
+    .banner-body-body-main h2,.banner-body-body-main h1{
+        font-size: 1.5rem;
+        color: #da597d;
+    }
+
+    .banner-body-body-main h2{
+        color: #ED2B2A;
+    }
+
+    .banner-body{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner-img{
+        width: 70%;
+        margin-inline: auto;
+        position: static;
+        padding-top: 20px;
+    }
+
+    .beautifier{
+        display: none;
+    }
+
+    .banner-section{
+        position: relative;
+        isolation: isolate;
+    }
+
+    .banner-section::before{
+        content: '';
+        position: absolute;
+        z-index: -10;
+        top: 72px;
+        left: -1px;
+        right: 10px;
+        width: 300px;
+        height: 410px;
+        background: #fff;
+        border-top-left-radius: 150px;
+        border-top-right-radius: 150px;
+    }
+
+    .banner-buttons a{
+        font-size: .7rem;
+        margin-bottom: 15px;
+        margin-top: 10px;
+        box-shadow: 5px 5px 10px #484747;
+        transition: 0.5s;
+    }
+
+    .banner-buttons a:hover{
+        opacity: 0.8;
+        transform: scale(0.95);
+        box-shadow: none;
+    }
+
+    .secondary-button{
+        padding: 5px;
+    }
+
+    .job-openings{
+        padding: 50px;
+    }
+
+    .job-opening-sections h2{
+        margin: 20px;
+    }
+
+    .cards{
+        width: 90%;
+        margin: auto;
+    }
+
+    .contact-us-main{
+        display: block;
+    }
+
+    .contact-box{
+        flex-direction: column-reverse;
+    }
+
+    .contact-left, .contact-right{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .contact-left h3, .contact-right h3{
+        margin: 20px;
+    }
+
+    .contact-us-shape{
+        display: none;
+    }
+
+    .contact-us{
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+    }
+
+    .contact-us::before{
+        content: '';
+        width: 100%;
+        height: 150%;
+        background: #fff;
+        position: absolute;
+        transform: rotate(45deg);
+        top: -36px;
+        z-index: -10;
+    }
+
+    .footer p{
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .banner-section::before{
+        left: -20px;
+    }
+
+    .job-openings{
+        padding: 20px 15px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .banner-section::before{
+        left: -46px;
+    }
+    .job-openings{
+        padding: 20px 5px;
+    }
+
+    .contact-us::before{
+        top: -15px;
+    }
+}
