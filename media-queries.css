@@ -1,7 +1,23 @@
 @media screen and (max-width: 768px) {
     .navbar-body{
-        display: none;
+        position: absolute;
+        inset: 0px;
+        top: -1000%;
+        width: 100%;
+        margin-inline: auto;
+        height: 80dvh;
+        transition: 1s;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 10px;
     }
+    
+    .active .navbar-body{
+        top: 70px;
+        background: #E74646;
+    }
+
     .hamburger-icon{
         display: block;
         font-size: 1.5rem;
@@ -9,19 +25,25 @@
         align-items: center;
         justify-content: center;
     }
-    .active{
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        gap: 10px;
-        inset: 10px;
-        top: 70px;
-        background: #fff;
-        width: 90%;
-        margin-inline: auto;
-        height: 80vh;
+
+    
+    .active .navbar-body .marker{
+        display: none;
     }
+
+    .navbar-yellow, .navbar-red{
+        transition: 0.5s;
+    }
+
+    .navbar-yellow:hover{
+        background: #E74646;
+    }
+    
+    .navbar-red:hover{
+        background: gold;
+    }
+
+
     .banner-body{
         width: 30%;
     }

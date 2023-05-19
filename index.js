@@ -1,3 +1,4 @@
+// navbar-animation
 let marker = document.querySelector('.marker');
 let navbarChilds = document.querySelectorAll('.navbar-child');
 let navbarMain = document.querySelector('.navbar-main');
@@ -8,12 +9,6 @@ function indicator(e){
     marker.style.width = e.offsetWidth + "px";
     marker.style.height = e.clientHeight + "px";
 }
-
-navbarChilds.forEach(element =>{
-    element.addEventListener('click', (e)=>{
-        indicator(e.target);
-    });
-});
 
 document.addEventListener("mouseover", (e)=>{
     if(e.target.getAttribute("class")=="navbar-child"){
@@ -69,6 +64,32 @@ contactUsShape.style.borderBottomRightRadius = `${contactUsShape.clientHeight/2}
 
 const hamburgerIcon = document.querySelector('.hamburger-icon');
 hamburgerIcon.addEventListener("click", ()=>{
-    const navbarBody = document.querySelector('.navbar-body');
-    navbarBody.classList.toggle("active");
-})
+    navbarMain.classList.toggle("active");
+
+    document.addEventListener("scroll",()=>{
+        let navbarBody = document.querySelector(".active .navbar-body");
+        let newNavbarChilds = document.querySelectorAll(".active .navbar-body .navbar-child");
+        let scrolling = window.scrollY;
+
+        if(scrolling>0){
+            navbarBody.style.backgroundColor = "gold";
+            newNavbarChilds.forEach((e)=>{
+                if(e.classList.contains("navbar-red")){
+                    e.classList.remove("navbar-red");
+                    e.classList.add("navbar-yellow");
+                }
+            });
+        }
+        else{
+            navbarBody.style.backgroundColor = "#E74646";
+            newNavbarChilds.forEach((e)=>{
+                if(e.classList.contains("navbar-yellow")){
+                    e.classList.remove("navbar-yellow");
+                }
+                e.classList.add("navbar-red");
+            });
+            
+        }
+    })
+});
+

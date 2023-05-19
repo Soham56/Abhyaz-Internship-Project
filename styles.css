@@ -47,20 +47,6 @@ body{
     font-family: 'Poppins';
 }
 
-.active{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    gap: 10px;
-    inset: 10px;
-    top: 70px;
-    background: #fff;
-    width: 90%;
-    margin-inline: auto;
-    height: 80vh;
-}
-
 
 .navbar-child{
     display: flex;
