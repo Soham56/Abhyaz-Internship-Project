@@ -555,6 +555,10 @@ input{
     background: inherit;
 }
 
+input::placeholder{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 textarea{
     width: 100%;
     border: 1px solid #ccc;
