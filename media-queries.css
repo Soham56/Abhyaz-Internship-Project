@@ -75,6 +75,10 @@
         gap: 20px;
     }
 
+    .job-opening-buttons button{
+        min-width: 40%;
+    }
+
     .contact-us{
         padding: 50px 20px 20px;
     }
@@ -96,7 +100,7 @@
     .banner-section{
         display: flex;
         flex-direction: column-reverse;
-        justify-content: center;
+        justify-content: space-evenly;
         isolation: isolate;
     }
 
@@ -144,7 +148,7 @@
         left: -1px;
         right: 10px;
         width: 300px;
-        height: 410px;
+        height: 100vh;
         background: #fff;
         border-top-left-radius: 150px;
         border-top-right-radius: 150px;
@@ -152,8 +156,8 @@
 
     .banner-buttons a{
         font-size: .7rem;
-        margin-bottom: 15px;
-        margin-top: 10px;
+        margin-bottom: 5px;
+        margin-top: 25px;
         box-shadow: 5px 5px 10px #484747;
         transition: 0.5s;
     }

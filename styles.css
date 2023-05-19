@@ -301,10 +301,90 @@ body{
     margin-bottom: 40px;
 }
 
+.job-opening-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 25px;
+    margin-block: 50px;
+}
+
+.job-opening-buttons button{
+    padding: 15px;
+    background: linear-gradient(45deg,#FFABAB,#F15A59,#F15A59,#FFABAB);
+    min-width: 20%;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border: none;
+    color: #fff;
+    font-size: .9rem;
+    position: relative;
+    transition: 0.5s;
+    isolation: isolate;
+}
+
+.job-opening-buttons button::before{
+    content: '';
+    position: absolute;
+    inset: 3px;
+    background: gold;
+    z-index: -1;
+}
+
+.job-opening-buttons button:hover{
+    letter-spacing: 0.25em;
+    box-shadow: 0 0 25px #F15A59;
+}
+
+
+
+.job-opening-buttons i{
+    position: absolute;
+    inset: 0;
+    display: block;
+    z-index: 2;
+}
+
+.job-opening-buttons i::before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 80%;
+    width: 10px;
+    height: 3px;
+    background: #FEF2F4;
+    transform: translateX(-50%) skewX(325deg);
+    transition: 0.5s;
+}
+
+.job-opening-buttons button:hover i::before{
+    width: 20px;
+    left: 20%;
+}
+
+.job-opening-buttons i::after{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 20%;
+    width: 10px;
+    height: 3px;
+    background: #FEF2F4;
+    transform: translateX(-50%) skewX(325deg);
+    transition: 0.5s;
+}
+
+.job-opening-buttons button:hover i::after{
+    width: 20px;
+    left: 80%;
+}
+
+
 .job-opening-heading{
     text-align: center;
     font-family: 'Lato';
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 .job-opening-card{

@@ -93,3 +93,34 @@ hamburgerIcon.addEventListener("click", ()=>{
     })
 });
 
+
+let jobOpeningButtons = document.querySelectorAll('.job-opening-buttons button');
+
+jobOpeningButtons.forEach((buttons)=>{
+    buttons.addEventListener("click", ()=>{
+        if(buttons.textContent === "All"){
+            jobOpeningButtons.forEach((e)=>{
+                if(e.textContent!="All"){
+                    let jobOpeningSection = document.querySelector(`.${getProperClassName(e.textContent)}`);
+                    jobOpeningSection.style.display = "block";
+                }
+            });
+        }
+        else{
+            jobOpeningButtons.forEach((e)=>{
+                if(e.textContent!="All"){
+                    let jobOpeningSection = document.querySelector(`.${getProperClassName(e.textContent)}`);
+                    jobOpeningSection.style.display = "none";
+                }
+            });
+            let clickedButton = document.querySelector(`.${getProperClassName(buttons.textContent)}`);
+            clickedButton.style.display = "block";
+        }
+    });
+});
+
+function getProperClassName(s){
+    s = s.toLowerCase();
+    let words = s.split(' ');
+    return words.join("-");
+}
